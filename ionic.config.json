@@ -1,0 +1,7 @@
+{
+  "name": "municipality-interface",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

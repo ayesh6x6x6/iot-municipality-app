@@ -1,0 +1,30 @@
+<ion-header>
+    <ion-navbar>
+      <!-- <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button> -->
+      <ion-title>Lets make a green city!</ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding>
+    <form #f="ngForm" (ngSubmit)="onLogin(f)">
+      <ion-card>
+        <ion-card-header>
+          Greencity Login
+        </ion-card-header>
+        <ion-card-content>
+          <ion-item>
+            <ion-label color="primary" floating >Username</ion-label>
+            <ion-input type="text" [(ngModel)]="user.username" required name="username" ></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label color="primary" floating >Password</ion-label>
+            <ion-input type="password" [(ngModel)]="user.password" required [minlength]="6" name="password" ></ion-input>
+          </ion-item>
+          <button ion-button block type="submit" [disabled]="!f.valid" >Login</button>
+        </ion-card-content>
+      </ion-card>
+    </form>
+  </ion-content>
+  
